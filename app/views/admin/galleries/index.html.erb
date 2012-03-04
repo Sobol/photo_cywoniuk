@@ -1,7 +1,21 @@
 <% content_for :header do %>
   <div id="menu" class="grid_8 omega">
     <ul id="nav">
-        <li><%= link_to "Galerie", admin_galleries_path%></li>
+        <li><%= link_to "Galerie", admin_galleries_path, :class=>"active"%></li>
     </ul>
   </div>  
 <%end%>
+
+<dic id="galleries">
+  <ul>
+    <% (1..8).each do |p| %>
+    <li><%= image_tag("/assets/1.jpg")%>
+    <%= link_to image_tag("/assets/remove.png"), "", :method=>:delete, :confirm=>"Are you sure ?", :class => "remove-photo" %>
+      </li>
+    <% end %>
+    <li class="add-photo">
+      <%= link_to image_tag("/assets/add.png"),  new_admin_gallery_path, :method => "get"%>
+    </li>
+  </ul>
+  <div style="clear: both; height: 20px;"></div>
+</div>

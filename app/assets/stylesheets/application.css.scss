@@ -16,7 +16,7 @@ body {
 }
 
 header {
-  height: 100px;
+  height: 75px;
 }
 
 header section, section.main, footer section {
@@ -27,7 +27,7 @@ header section, section.main, footer section {
 section.main {
   position: relative;
   width: 1000px;
-  height: 550px;
+  min-height: 550px;
   background-color: #C5C5C5;
   background-image: url('main-bg.jpg');
   background-position: center center;
@@ -35,3 +35,18 @@ section.main {
   line-height: normal;
 }
 
+ul li {
+  list-style: none;
+  float: left;
+  display: block;
+  margin: 20px 10px 0 10px;
+}
+
+#user_nav {
+  float: left;
+}
+
+#user_nav a {
+  text-decoration: none;
+  padding-left: 5px;
+}

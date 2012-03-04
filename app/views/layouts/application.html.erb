@@ -16,6 +16,11 @@
 <body>
   <header>
     <section>
+      <% if user_signed_in? %>
+        <div id="user_nav">
+            <%= link_to "Wyloguj", destroy_user_session_path, :method => :delete %>
+        </div>
+      <% end %>
       <%= yield :header %>
     </section>
   </header>
