@@ -6,3 +6,19 @@
     </ul>
   </div>  
 <%end%>
+
+<dic id="galleries">
+  <ul>
+    <% @galleries.each do |g| %>
+    <li>
+      <%= link_to image_tag(g.photo(:medium)), "" %>
+      <div class="infobox"> 
+        <h4><%= g.title %></h4>
+        <span><%= g.description %></span>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+  <div style="clear: both; height: 20px;"></div>
+</div>
+

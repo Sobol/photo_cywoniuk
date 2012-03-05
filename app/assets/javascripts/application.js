@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require s3Slider
 //= require_tree .
 
 $(function() {
@@ -20,5 +21,7 @@ $(function() {
   }).mouseleave(function() {
     $(this).children(".remove-photo").hide();
   });
+  
+  $("#galleries ul li .infobox").animate({top: '-43px'});
 });
 
