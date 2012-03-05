@@ -11,12 +11,32 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120304154611) do
+ActiveRecord::Schema.define(:version => 20120305160106) do
 
   create_table "galleries", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.text     "title"
+    t.text     "description"
   end
+
+  create_table "gallery_images", :force => true do |t|
+    t.integer  "gallery_id",         :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.text     "title"
+    t.text     "description"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  add_index "gallery_images", ["gallery_id"], :name => "index_gallery_images_on_gallery_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

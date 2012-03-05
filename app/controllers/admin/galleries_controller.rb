@@ -8,36 +8,36 @@ class Admin::GalleriesController < Admin::AdminController
   end
 
   def new
-    @galleries = Gallery.new
+    @gallery = Gallery.new
   end
 
   def edit
-    @galleries = Gallery.find(params[:id])
+    @gallery = Gallery.find(params[:id])
   end
 
   def create
-    @galleries = Gallery.new(params[:news])
-    if @galleries.save
-      redirect_to(admin_galleries_path(@galleries))
+    @gallery = Gallery.new(params[:gallery])
+    if @gallery.save
+      redirect_to(admin_galleries_path)
     else
       render :action => :new
     end
   end
 
   def update
-    @galleries = Gallery.find(params[:id])
+    @gallery = Gallery.find(params[:id])
 
-    if @galleries.update_attributes(params[:news])
-      redirect_to(admin_galleries_path(@galleries), :notice => "Gallery was successfully updated.")
+    if @gallery.update_attributes(params[:news])
+      redirect_to(admin_galleries_path(@gallery), :notice => "Gallery was successfully updated.")
     else
       render :action => :edit
     end
   end
 
   def destroy
-    @galleries = Gallery.find(params[:id])
-    @galleries.destroy
-    redirect_to(admin_galleries_index_path)
+    @gallery = Gallery.find(params[:id])
+    @gallery.destroy
+    redirect_to(admin_galleries_path)
   end
 
   private

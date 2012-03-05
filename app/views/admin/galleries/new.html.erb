@@ -5,3 +5,13 @@
     </ul>
   </div>  
 <%end%>
+
+<%= form_for @gallery, :url => admin_galleries_path, :html => { :multipart => true } do |form| %>
+  <%= form.label "Tytuł" %>
+  <%= form.text_field :title %><br />
+  <%= form.label "Krótki" %>
+  <%= form.text_area :description %><br />
+  <%= form.file_field :photo %>
+  <%= form.submit "Zapisz", :class => "left" %>
+  <%= link_to "Cofnij", admin_galleries_path, :class => "left" %>
+<% end %>
