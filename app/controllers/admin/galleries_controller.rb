@@ -4,7 +4,7 @@ class Admin::GalleriesController < Admin::AdminController
   end
 
   def show
-    @galleries = Gallery.find(params[:id])
+    @gallery = Gallery.find(params[:id])
   end
 
   def new
@@ -27,8 +27,8 @@ class Admin::GalleriesController < Admin::AdminController
   def update
     @gallery = Gallery.find(params[:id])
 
-    if @gallery.update_attributes(params[:news])
-      redirect_to(admin_galleries_path(@gallery), :notice => "Gallery was successfully updated.")
+    if @gallery.update_attributes(params[:gallery])
+      redirect_to(admin_gallery_path(@gallery))
     else
       render :action => :edit
     end

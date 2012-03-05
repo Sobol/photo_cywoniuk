@@ -9,7 +9,7 @@
 <dic id="galleries">
   <ul>
     <% @galleries.each do |g| %>
-    <li><%= image_tag(g.photo(:medium))%>
+    <li><%= link_to image_tag(g.photo(:medium)), admin_gallery_path(g) %>
     <%= link_to image_tag("/assets/remove.png"), admin_gallery_path(g), :method=>:delete, :confirm=>"Czy jesteś pewien że chcesz usunąć galerie ?", :class => "remove-photo" %>
       </li>
     <% end %>

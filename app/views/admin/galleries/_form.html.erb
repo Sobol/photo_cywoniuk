@@ -1,0 +1,15 @@
+<div id="gallery-form">
+  <% url = params[:action] == "new" ? admin_galleries_path : admin_gallery_path%>
+  <%= form_for @gallery, :url => url, :html => { :multipart => true } do |form| %>
+    <p>Tytuł:</p>
+    <%= form.text_field :title %><br />
+    <p>Krótki opis galeri:</p>
+    <%= form.text_field :description %><br /><br />
+    <%= form.file_field :photo %><br/><br/>
+    <% if params[:action] == "edit" %>
+      <%= image_tag(@gallery.photo(:medium)) %>
+    <% end %><br/><br/>
+    <%= form.submit "Zapisz", :class => "left" %>
+    <%= link_to "Cofnij", admin_galleries_path, :class => "left" %>
+  <% end %>
+</div>

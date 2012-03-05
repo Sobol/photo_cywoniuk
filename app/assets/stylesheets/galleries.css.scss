@@ -27,3 +27,27 @@
 .add-photo {
   border: 1px solid #272729;
 }
+
+#gallery-form,
+#gallery-info {
+  height: 550px;
+  width: 300px;
+  padding: 25px;
+  color: #272729;
+  font-size: 14px;
+}
+
+#gallery-info {
+  border-right: 1px dotted #272729;
+}
+
+#gallery-form p,
+#gallery-info p {
+  font-weight: 700;
+  font-size: 16px;
+  display: inline;
+}
+
+label {
+  width: 100px;
+}

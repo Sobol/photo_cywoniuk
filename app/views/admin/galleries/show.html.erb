@@ -5,3 +5,15 @@
     </ul>
   </div>  
 <%end%>
+
+<div id="gallery-info">
+  <p>Tytuł: </p><span><%= @gallery.title%></span><br/><br/>
+  <p>Krótki opis: </p><span><%= @gallery.description%></span><br/><br/>
+  <%= image_tag(@gallery.photo(:medium)) %><br/><br/>
+  <%= link_to "Edytuj", edit_admin_gallery_path(@gallery)%>
+  <%= link_to "Cofnij", admin_galleries_path%>
+</div>
+
+<div>
+
+</div>
