@@ -12,8 +12,30 @@
   <%= image_tag(@gallery.photo(:medium)) %><br/><br/>
   <%= link_to "Edytuj", edit_admin_gallery_path(@gallery)%>
   <%= link_to "Cofnij", admin_galleries_path%>
+
+  <div id="add-new-image">
+    <%= form_for @image, :url => admin_gallery_images_path, :html => { :multipart => true } do |form| %>
+      <%= form.hidden_field :gallery_id, :value => @gallery.id %><br />
+      <p>Tytuł:</p>
+      <%= form.text_field :title %><br />
+      <p>Krótki opis zdjęcia:</p>
+      <%= form.text_field :description %><br /><br />
+      <%= form.file_field :image %><br/><br/>
+      <%= form.submit "Stwórz", :class => "center" %>
+    <% end %>
+  </div>
 </div>
 
 <div>
-
+  <ul>
+    <% @images.each do |i| %>
+    <li>
+      <%= link_to image_tag(i.image(:thumb)), "" %>
+      <div class="infobox"> 
+        <h4><%= i.title %></h4>
+        <span><%= i.description %></span>
+      </div>
+    </li>
+    <% end %>
+  </ul>
 </div>

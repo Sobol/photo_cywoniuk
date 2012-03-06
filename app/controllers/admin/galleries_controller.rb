@@ -5,6 +5,8 @@ class Admin::GalleriesController < Admin::AdminController
 
   def show
     @gallery = Gallery.find(params[:id])
+    @images = @gallery.gallery_images
+    @image = GalleryImage.new
   end
 
   def new
@@ -38,11 +40,5 @@ class Admin::GalleriesController < Admin::AdminController
     @gallery = Gallery.find(params[:id])
     @gallery.destroy
     redirect_to(admin_galleries_path)
-  end
-
-  private
-
-  def page
-    params[:page] || 1
   end
 end
