@@ -4,6 +4,7 @@ PhotoCywoniuk::Application.routes.draw do
 
   namespace :admin do
     resources :galleries, :only => [:index, :new, :show, :edit, :destroy, :create, :update]
+    resources :gallery_images, :only => [:show, :edit, :destroy, :create, :update]
     root :to => "galleries#index"
   end
   

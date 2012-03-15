@@ -8,6 +8,6 @@ class GalleryImage < ActiveRecord::Base
   
   has_attached_file :image, 
                     :styles => { 
-                      :thumb => "114x72>",
-                      :medium => "920x360>" }
+                      :thumb => "114x72#",
+                      :medium => "920x360#" }
 end

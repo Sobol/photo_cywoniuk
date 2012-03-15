@@ -21,7 +21,14 @@
   top: -195px;
   left: 260px;
   padding: 6px;
+  width: 24px;
+  height: 24px;
   display: none;
+}
+
+#image-list .remove-photo {
+  top: -72px;
+  left: 80px;
 }
 
 .add-photo {
@@ -31,10 +38,11 @@
 #gallery-form,
 #gallery-info {
   height: 550px;
-  width: 300px;
+  width: 350px;
   padding: 25px;
   color: #272729;
   font-size: 14px;
+  float: left;
 }
 
 #gallery-info {
@@ -55,7 +63,7 @@ label {
 #add-new-image {
   border-top: 1px dotted #272729;
   margin: 15px 0 0 -25px;
-  width: 350px;
+  width: 400px;
   padding: 20px 0;
 }
 
@@ -77,4 +85,23 @@ label {
   width: 70px;
   display: block;
   float: none;
+}
+
+#image-list {
+  float: left;
+  width: 599px;
+  position: relative;
+}
+
+.clear { 
+  clear: both;
+}
+
+#image-list ul {
+  display: block;
+}
+
+#image-list ul li {
+  width: 114px !important;
+  height: 75px !important;
 }

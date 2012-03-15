@@ -16,26 +16,25 @@
   <div id="add-new-image">
     <%= form_for @image, :url => admin_gallery_images_path, :html => { :multipart => true } do |form| %>
       <%= form.hidden_field :gallery_id, :value => @gallery.id %><br />
-      <p>Tytuł:</p>
+      <p>Tytuł:</p><br/>
       <%= form.text_field :title %><br />
-      <p>Krótki opis zdjęcia:</p>
+      <p>Krótki opis zdjęcia:</p><br/>
       <%= form.text_field :description %><br /><br />
       <%= form.file_field :image %><br/><br/>
       <%= form.submit "Stwórz", :class => "center" %>
     <% end %>
   </div>
 </div>
-
-<div>
+<div id="image-list">
   <ul>
     <% @images.each do |i| %>
     <li>
       <%= link_to image_tag(i.image(:thumb)), "" %>
-      <div class="infobox"> 
-        <h4><%= i.title %></h4>
-        <span><%= i.description %></span>
-      </div>
+      <%= link_to image_tag("/assets/remove.png"), admin_gallery_image_path(:id => i.id, :gallery_id => @gallery.id), :method=>:delete, :confirm=>"Czy jesteś pewien że chcesz usunąćto zdjęcie ?", :class => "remove-photo" %>
     </li>
     <% end %>
   </ul>
+  <div class="clear"></div>
 </div>
+<br class="clear"/>
+

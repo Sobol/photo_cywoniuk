@@ -16,7 +16,7 @@
 //= require_tree .
 
 $(function() {
-  $("#galleries ul li").mouseenter(function() {
+  $("#image-list ul li, #galleries ul li").mouseenter(function() {
     $(this).children(".remove-photo").show();
   }).mouseleave(function() {
     $(this).children(".remove-photo").hide();
