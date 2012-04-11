@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require s3Slider
+//= require jQuery.BlackAndWhite.js
 //= require_tree .
 
 $(function() {
@@ -22,6 +22,14 @@ $(function() {
     $(this).children(".remove-photo").hide();
   });
   
-  $("#galleries ul li .infobox").animate({top: '-43px'});
+  $("#galleries.baw ul li").BlackAndWhite({
+      webworkerPath: false
+  });
+  
+  $("#galleries ul li").mouseenter(function() {
+    $(this).children(".infobox").animate({top: "-43px"}, 400);
+  }).mouseleave(function() {
+    $(this).children(".infobox").animate({top: "10px"}, 400);
+  });
 });
 

@@ -1,16 +1,17 @@
 <% content_for :header do %>
   <div id="menu" class="grid_8 omega">
     <ul id="nav">
-        <li><%= link_to "Galerie", galleries_path%></li>
-        <li><%= link_to "Kontakt", about_page_path%></li>
+      <li><%= link_to "Kontakt", about_page_path%></li>
+      <li><%= link_to "Galerie", galleries_path, :class => "active"%></li>
     </ul>
-  </div>  
+  </div>
 <%end%>
 
-<dic id="galleries">
+
+<dic id="galleries" class="baw">
   <ul>
     <% @galleries.each do |g| %>
-    <li>
+    <li class="bwWrapper">
       <%= link_to image_tag(g.photo(:medium)), "" %>
       <div class="infobox"> 
         <h4><%= g.title %></h4>

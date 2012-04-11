@@ -16,7 +16,17 @@ body {
 }
 
 header {
-  height: 75px;
+  background-color: #282323;
+  background-image: url("header-bg.png");
+  border-bottom: 1px solid black;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  color: #CCCCCC;
+  height: 26px;
+  left: 0;
+  padding: 6px 0;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
 }
 
 header section, section.main, footer section {
@@ -25,14 +35,30 @@ header section, section.main, footer section {
 }
 
 section.main {
-  position: relative;
   width: 1000px;
-  min-height: 550px;
-  background-color: #C5C5C5;
-  background-image: url('main-bg.jpg');
-  background-position: center center;
+  min-height: 465px;
   background-repeat: no-repeat;
   line-height: normal;
+  background-color: #FBFBFB;
+  color: #231E1E;
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #EAEAEA #EAEAEA -moz-use-text-color;
+  border-radius: 4px 4px 0 0;
+  border-style: solid solid none;
+  border-width: 1px 1px 0;
+  box-shadow: 0 1px 3px #CCCCCC;
+  display: block;
+  overflow: hidden;
+  padding: 10px;
+  margin: 40px auto;
+}
+
+ul {
+  margin: 0;
 }
 
 ul li {
@@ -43,6 +69,18 @@ ul li {
   margin: 20px 10px 0 10px;
 }
 
+#nav li {
+  margin: 5px 10px 0 10px;
+  float: right;
+}
+
+#nav li a {
+  color: #D2D2D2;
+  padding-bottom: 3px;
+  text-decoration: none;
+  text-shadow: 0 1px 1px #000000;
+}
+
 #user_nav {
   float: left;
 }
@@ -50,6 +88,7 @@ ul li {
 #user_nav a {
   text-decoration: none;
   padding-left: 5px;
+  color: #D2D2D2;
 }
 
 .infobox{
@@ -63,10 +102,58 @@ ul li {
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
   color: #fff;
+  font: 10px/15px Arial, Helvetica, sans-serif;
+  color: white;
 }
 
 .infobox h4, .infobox span {
-	padding-left: 10px;
+	padding: 3px 0 0 10px;
 	margin: 0;
 }
 
+.infobox h4 {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+#menu {
+  height: 25px; 
+}
+
+.bwWrapper { 
+  position:relative; 
+  display:block; 
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  bottom: 0;
+  clear: both;
+  position: relative;
+}
+
+footer .container {
+  border-top: 1px solid #DDDDDD;
+  margin-top: 4em;
+  padding: 0.5em 0 0;
+}
+
+footer section {
+	margin: 0 auto;
+	color: #757E82;
+}
+
+#legal {
+	margin: 10px 0 30px 0;
+	font-size: 11px;
+  text-align: left;
+  float: left;
+  width: 500px;
+}
+
+.addthis_toolbox {
+  width: 144px;
+  float: right;
+}
