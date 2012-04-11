@@ -13,6 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require jQuery.BlackAndWhite.js
+//= require jquery.timers-1.2
+//= require jquery.easing.1.3
+//= require jquery.galleryview-3.0-dev
 //= require_tree .
 
 $(function() {
@@ -20,6 +23,25 @@ $(function() {
     $(this).children(".remove-photo").show();
   }).mouseleave(function() {
     $(this).children(".remove-photo").hide();
+  });
+  
+  $('#myGallery').galleryView({
+    panel_width: 990,
+    panel_height: 450,
+    autoplay: true,
+    transition_interval: 4000,
+		show_panels: true, 				//BOOLEAN - flag to show or hide panel portion of gallery
+		enable_overlays: true, 			//BOOLEAN - flag to show or hide panel overlays
+		panel_animation: 'crossfade', 		//STRING - animation method for panel transitions (crossfade,fade,slide,none)
+		overlay_position: 'bottom', 	//STRING - position of panel overlay (bottom, top)
+		start_frame: 1, 				//INT - index of panel/frame to show first when gallery loads
+		frame_width: 164, 				//INT - width of filmstrip frames (in pixels)
+		frame_height: 80, 				//INT - width of filmstrip frames (in pixels)
+		frame_opacity: 0.5, 			//FLOAT - transparency of non-active frames (1.0 = opaque, 0.0 = transparent)
+		frame_scale: 'crop', 			//STRING - cropping option for filmstrip images (same as above)
+		frame_gap: 5, 					//INT - spacing between frames within filmstrip (in pixels)
+		show_infobar: true,				//BOOLEAN - flag to show or hide infobar
+		infobar_opacity: 0.0				//FLOAT - transparency for info bar
   });
   
   $("#galleries.baw ul li").BlackAndWhite({

@@ -1,0 +1,16 @@
+<% content_for :header do %>
+  <div id="menu" class="grid_8 omega">
+    <ul id="nav">
+      <li><%= link_to "Kontakt", about_page_path %></li>
+      <li><%= link_to "Galerie", galleries_path %></li>
+    </ul>
+  </div>
+<%end%>
+
+<div id="gallery">
+  <ul id="myGallery">
+    <% @gallery.gallery_images.each do |img| %>
+      <li><%= image_tag(img.image(:medium), "data-description" => img.description, :title => img.title) %></li>
+    <% end %>
+  </ul>
+</div>

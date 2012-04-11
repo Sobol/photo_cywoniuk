@@ -3,6 +3,7 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
+ *= require jquery.galleryview-3.0-dev
  *= require_tree .
 */
 
@@ -156,4 +157,15 @@ footer section {
 .addthis_toolbox {
   width: 144px;
   float: right;
+}
+
+.gv_showOverlay, .gv_overlay {
+  background: rgb(0, 0, 0) transparent !important;
+  background: rgba(0, 0, 0, 0.6) !important;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000) !important;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)" !important;
+}
+
+.gv_showOverlay {
+  background-image: url("themes/light/info.png") !important;
 }
