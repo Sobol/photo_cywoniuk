@@ -42,12 +42,7 @@ section.main {
   line-height: normal;
   background-color: #FBFBFB;
   color: #231E1E;
-  -moz-border-bottom-colors: none;
-  -moz-border-image: none;
-  -moz-border-left-colors: none;
-  -moz-border-right-colors: none;
-  -moz-border-top-colors: none;
-  border-color: #EAEAEA #EAEAEA -moz-use-text-color;
+  border-color: #EAEAEA #EAEAEA;
   border-radius: 4px 4px 0 0;
   border-style: solid solid none;
   border-width: 1px 1px 0;
@@ -131,6 +126,7 @@ ul li {
 footer {
   width: 100%;
   bottom: 0;
+  height: 60px;
   clear: both;
   position: relative;
 }
@@ -155,7 +151,8 @@ footer section {
 }
 
 .addthis_toolbox {
-  width: 144px;
+  width: 220px;
+  margin-top: 6px;
   float: right;
 }
 
