@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jQuery.BlackAndWhite.js
 //= require jquery.timers-1.2
 //= require jquery.easing.1.3
 //= require jquery.galleryview-3.0-dev
@@ -44,12 +43,13 @@ $(function() {
 		infobar_opacity: 0.0				//FLOAT - transparency for info bar
   });
   
-  $("#galleries.baw ul li a img").BlackAndWhite({
+  $("#galleries.baw ul li").BlackAndWhite({
+      hoverEffect : true,
       webworkerPath: false
   });
   
   $("#galleries ul li").mouseenter(function() {
-    $(this).children(".infobox").animate({top: "-43px"}, 400);
+    $(this).children(".infobox").animate({top: "-40px"}, 400);
   }).mouseleave(function() {
     $(this).children(".infobox").animate({top: "10px"}, 400);
   });
