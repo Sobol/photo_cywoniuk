@@ -15,6 +15,12 @@
   cursor: pointer;
 }
 
+#galleries ul li a {
+  display: block;
+  width: 300px;
+  height: 200px;
+}
+
 .remove-photo {
   position: relative;
   top: -195px;
