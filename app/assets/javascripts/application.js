@@ -44,7 +44,7 @@ $(function() {
 		infobar_opacity: 0.0				//FLOAT - transparency for info bar
   });
   
-  $("#galleries.baw ul li").BlackAndWhite({
+  $("#galleries.baw ul li a img").BlackAndWhite({
       webworkerPath: false
   });
   
