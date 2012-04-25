@@ -1,0 +1,19 @@
+$(function() {
+  if($("body").hasClass("galleries-controller show-action")) {
+    Galleria.loadTheme('<%= asset_path("themes/classic/galleria.classic.min.js")%>');
+    $("#gallery").galleria({
+      autoplay: 4000,
+      showCounter: false,
+      swipe: true,
+      pauseOnInteraction: false,
+      clicknext: true,
+      transition: 'fade',
+      idleMode: false,
+      showImagenav: true
+    });
+    Galleria.configure({
+      initialTransition: 'fadeslide'
+    });
+  }
+});
+
