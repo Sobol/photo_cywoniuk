@@ -12,5 +12,5 @@ class Gallery < ActiveRecord::Base
                     :s3_headers => { :cache_control => "max-age=#{364.days.to_i}" },
                     :s3_permissions => :public_read,
                     :styles => { 
-                      :medium => "300x200#" }
+                      :medium => "300x200!" }
 end

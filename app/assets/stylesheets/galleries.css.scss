@@ -110,3 +110,23 @@ label {
   width: 114px !important;
   height: 75px !important;
 }
+
+#gallery {height:550px}
+
+.galleria-info-text {
+  background: none repeat scroll 0 0 #222222;
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6) !important;
+  color: white;
+  position: absolute;
+  z-index: 200;
+  width: 980px !important;
+  left: -14px !important;
+  bottom: -46px;
+}
+
+.galleria-info-close {
+  left: 960px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10000;
+}

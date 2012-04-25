@@ -8,9 +8,7 @@
 <%end%>
 
 <div id="gallery">
-  <ul id="myGallery">
-    <% @gallery.gallery_images.each do |img| %>
-      <li><%= image_tag(img.image(:medium), "data-description" => img.description, :title => img.title) %></li>
-    <% end %>
-  </ul>
+  <% @gallery.gallery_images.each do |img| %>
+    <%= image_tag(img.image(:medium), "data-description" => img.description, :title => img.title) %>
+  <% end %>
 </div>

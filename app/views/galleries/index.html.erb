@@ -11,8 +11,8 @@
 <dic id="galleries" class="baw">
   <ul>
     <% @galleries.each do |g| %>
-    <li class="bwWrapper">
-      <%= link_to image_tag(g.photo(:medium), :width => "300", :height => "200"), gallery_path(g) %>
+    <li>
+      <%= link_to image_tag(g.photo(:medium)), gallery_path(g) %>
       <div class="infobox"> 
         <h4><%= g.title %></h4>
         <span><%= g.description %></span>
