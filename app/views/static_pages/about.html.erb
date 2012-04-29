@@ -1,8 +1,8 @@
-<% content_for :header do %>
-  <div id="menu" class="grid_8 omega">
-    <ul id="nav">
-      <li><%= link_to "Kontakt", about_page_path%></li>
-      <li><%= link_to "Galerie", galleries_path, :class => "active"%></li>
-    </ul>
+<% content_for :sidebar do %>
+  <div id="menu">
+    <%= link_to "portfolio", galleries_path %>
+    <%= link_to "kontakt", about_page_path %>
+    <%= image_tag "logo.png"%>
+    <p>fotostudio</p>
   </div>
 <%end%>

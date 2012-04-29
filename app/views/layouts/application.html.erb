@@ -21,25 +21,15 @@
           <%= link_to "Wyloguj", destroy_user_session_path, :method => :delete %>
         </div>
       <% end %>
-      <%= yield :header %>
     </section>
   </header>
   
+  
   <section id="wrapper">
+    <section id="left-sidebar">
+      <%= yield :sidebar %>
+    </section>
     <section class="main">
-      <section class="flash">
-        <% flash.each do |key, msg| %>
-          <div id="<%= key %>">
-            <% if msg.kind_of?(Array) %>
-              <% msg.each do |m| %>
-                <p><%= m %></p>
-              <% end %>
-            <% else %>
-              <p><%= msg %></p>
-            <% end %>
-          </div>
-        <% end %>
-      </section>
       <%= yield %>
     </section>
   </section>
