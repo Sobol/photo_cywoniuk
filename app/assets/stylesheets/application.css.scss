@@ -198,7 +198,8 @@ footer section {
 }
 
 .normal {
-  display: none;
+  position: absolute; 
+  opacity: 0;
 }
 
 #new_user p label{

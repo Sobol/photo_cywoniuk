@@ -23,18 +23,10 @@ $(function() {
   });
   
   $("#galleries ul li").mouseenter(function() {
-    var $self = $(this);
-    $self.find("a.grayscale").fadeTo(200, 1, function () {
-      $self.find("a.grayscale").fadeOut();
-      $self.find("a.normal").fadeIn();
-    });
+    $(this).find("a.normal").stop().animate({opacity:1}, 1000);
     $(this).children(".infobox").animate({top: "-40px"}, 400);
   }).mouseleave(function() {
-    var $self = $(this);
-    $self.find("a.normal").fadeTo(600, 1, function () {
-      $self.find("a.normal").fadeOut();
-      $self.find("a.grayscale").fadeIn();
-    });
+		$(this).find('a.normal').stop().animate({opacity:0}, 1000);
     $(this).children(".infobox").animate({top: "10px"}, 400);
   });
 });
