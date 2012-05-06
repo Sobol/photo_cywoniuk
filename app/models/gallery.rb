@@ -11,6 +11,8 @@ class Gallery < ActiveRecord::Base
                     :path => ":class/:id/:basename/:style.:extension",
                     :s3_headers => { :cache_control => "max-age=#{364.days.to_i}" },
                     :s3_permissions => :public_read,
+                    :convert_options => { :grayscale_medium => "-colorspace Gray" },
                     :styles => { 
-                      :medium => "300x200!" }
+                      :medium => "300x200!",
+                      :grayscale_medium => "300x200!" }
 end

@@ -1,5 +1,5 @@
 $(function() {
-  if($("body").hasClass("galleries-controller show-action")) {
+  if($("body").hasClass("galleries-controller") && $("body").hasClass("show-action")) {
     Galleria.loadTheme('<%= asset_path("themes/classic/galleria.classic.min.js")%>');
     $("#gallery").galleria({
       autoplay: 4000,

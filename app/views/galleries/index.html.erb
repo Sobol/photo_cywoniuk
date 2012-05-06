@@ -8,11 +8,12 @@
 <%end%>
 
 
-<dic id="galleries" class="baw">
+<dic id="galleries">
   <ul>
     <% @galleries.each do |g| %>
     <li>
-      <%= link_to image_tag(g.photo(:medium)), gallery_path(g) %>
+      <%= link_to image_tag(g.photo(:medium)), gallery_path(g), :class=>"normal" %>
+      <%= link_to image_tag(g.photo(:grayscale_medium)), gallery_path(g), :class=>"grayscale" %>
       <div class="infobox"> 
         <h4><%= g.title %></h4>
         <span><%= g.description %></span>

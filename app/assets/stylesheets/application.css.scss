@@ -20,6 +20,10 @@ a, p {
   font-size: 20px;
 }
 
+.admin-controller a, .admin-controller p {
+  color: #000;
+}
+
 body {
   background-color: black;
   margin: 0;
@@ -62,12 +66,20 @@ section.main {
   float: left;
 }
 
+.admin-controller .main {
+  width: 1000px;
+}
+
 #left-sidebar {
   width: 201px;
   min-height: 440px;
   margin-top: 40px;
   float: left;
   margin-right: 30px;
+}
+
+.admin-controller #left-sidebar {
+  display: none;
 }
 
 #left-sidebar img {
@@ -183,4 +195,12 @@ footer section {
 
 .addthis_toolbox a {
   float: right !important;
+}
+
+.normal {
+  display: none;
+}
+
+#new_user p label{
+  color: #000;
 }

@@ -23,8 +23,18 @@ $(function() {
   });
   
   $("#galleries ul li").mouseenter(function() {
+    var $self = $(this);
+    $self.find("a.grayscale").fadeTo(200, 1, function () {
+      $self.find("a.grayscale").fadeOut();
+      $self.find("a.normal").fadeIn();
+    });
     $(this).children(".infobox").animate({top: "-40px"}, 400);
   }).mouseleave(function() {
+    var $self = $(this);
+    $self.find("a.normal").fadeTo(600, 1, function () {
+      $self.find("a.normal").fadeOut();
+      $self.find("a.grayscale").fadeIn();
+    });
     $(this).children(".infobox").animate({top: "10px"}, 400);
   });
 });

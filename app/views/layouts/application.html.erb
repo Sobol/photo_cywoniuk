@@ -13,7 +13,9 @@
   <%= yield :head %>
   <%= yield :location_libraries %>
 </head>
-<body class="<%= params[:controller] %>-controller <%= params[:action] %>-action">
+<% controller_class = params[:controller].include?("admin") ? "admin":params[:controller] %>
+<% controller_class += "-controller"%>
+<body class="<%= controller_class %>  <%= params[:action] %>-action">
   <header>
     <section>
       <% if user_signed_in? %>
