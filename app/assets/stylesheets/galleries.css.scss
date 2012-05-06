@@ -110,7 +110,7 @@ label {
   height: 75px !important;
 }
 
-#gallery {height:550px}
+#gallery {height:510px}
 
 .galleria-info-text {
   background: none repeat scroll 0 0 #222222;
@@ -128,4 +128,11 @@ label {
   cursor: pointer;
   position: absolute;
   z-index: 10000;
+}
+
+.galleries-controller.show-action .main {
+  background-color: #000 !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin-top: 60px;
 }
