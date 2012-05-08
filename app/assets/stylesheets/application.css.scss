@@ -3,8 +3,8 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
- *= squirell_font/squirell
  *= require_tree .
+ *= require AccidentalPresidencyRegular
 */
 
 html, body {
@@ -75,7 +75,6 @@ section.main {
   min-height: 440px;
   margin-top: 40px;
   float: left;
-  margin-right: 30px;
 }
 
 .admin-controller #left-sidebar {
@@ -83,8 +82,8 @@ section.main {
 }
 
 #left-sidebar img {
-  margin: 20px 0 10px 0;
-  width: 165px;
+  margin: 20px 0 0px 0;
+  width: 105px;
 }
 
 #left-sidebar p{

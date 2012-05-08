@@ -2,9 +2,28 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <%= csrf_meta_tag %>
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+       Remove this if you use the .htaccess -->
+  <!--[if ie]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script>
+      document.createElement('header');
+      document.createElement('footer');
+    </script>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="shortcut icon" href="<%= asset_path 'mini_logo.ico' %>" />
+  <meta name="description" content="Michał Cywoniuk fotograf" />
+  <meta name="author" content="www.mcfotostudio.pl" />
+  <meta property="og:title" content="www.mcfotostudio.pl"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:description" content="Michał Cywoniuk fotograf"/>
+  <meta content="<%= asset_path 'fb_logo.jpg' %>" property="og:image" />
+  <meta content="http://www.mcfotostufio.pl/" property="og:url" />
+  <meta property="og:site_name" content="www.mcfotostudio.pl"/>
+  <meta property="fb:app_id" content="459567824060103"/>
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PhotoCywoniuk</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
