@@ -5,7 +5,7 @@ class Admin::GalleriesController < Admin::AdminController
 
   def show
     @gallery = Gallery.find(params[:id])
-    @images = @gallery.gallery_images
+    @images = @gallery.gallery_images.order("created_at ASC")
     @image = GalleryImage.new
   end
 

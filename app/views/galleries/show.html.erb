@@ -1,14 +1,14 @@
 <% content_for :sidebar do %>
   <div id="menu">
-    <%= link_to "portfolio", galleries_path %>
-    <%= link_to "kontakt", about_page_path %>
-    <%= image_tag "logo.png"%>
+    <%= link_to "portfolio", galleries_path, class:"smaller" %>
+    <%= link_to "kontakt", about_page_path, class:"smaller" %>
+    <%= image_tag "logo1.png"%>
     <p>fotostudio</p>
   </div>
 <%end%>
 
 <div id="gallery">
-  <% @gallery.gallery_images.each do |img| %>
+  <% @gallery.gallery_images.order("created_at ASC").each do |img| %>
     <%= image_tag(img.image(:original), "data-description" => img.description, "data-thumb" =>img.image(:thumb), "data-title" => img.title) %>
   <% end %>
 </div>

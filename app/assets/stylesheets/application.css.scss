@@ -17,7 +17,11 @@ a, p {
   text-decoration: none;
   color: #fff;
   padding-right: 5px;
-  font-size: 20px;
+  font-size: 26px;
+}
+
+.smaller {
+  font-size: 22px;
 }
 
 .admin-controller a, .admin-controller p {
@@ -83,7 +87,7 @@ section.main {
 
 #left-sidebar img {
   margin: 20px 0 0px 0;
-  width: 105px;
+  width: 125px;
 }
 
 #left-sidebar p{
@@ -119,6 +123,10 @@ ul li {
 
 #user_nav {
   float: left;
+}
+
+.galleries-controller #user_nav {
+  position: absolute;
 }
 
 #user_nav a {
